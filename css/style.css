@@ -1,0 +1,468 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+html{
+    height: 100%;
+}
+body{
+    font-family: Arial, sans-serif;
+    color: #331815;
+    background-color: #EDE0D4;
+    min-height: 100%;
+}
+
+.container > * {
+    text-align: center;
+}
+
+.navbar{
+    grid-area: navbar;
+    background-color: #9C6644;
+}
+
+.header{
+    grid-area: header;
+    background-color: #EDE0D4;
+}
+
+.main1{
+    grid-area: main1;
+    background-color: #EDE0D4;
+}
+
+.sectioneventos{
+    grid-area: sectioneventos;
+    background-color: #EDE0D4;
+}  
+.sectioneventos div{
+    padding: 10px;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: #B08968;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+    "navbar"
+    "header"
+    "main1"
+    "sectioneventos"
+    "footer";
+}
+
+
+  
+@keyframes fade {
+    from {opacity: .2} 
+    to {opacity: 1}
+}
+
+@media (max-width: 599px){
+    .container{
+        grid-template-rows: 80px 600px 500px 2050px 50px;
+        grid-template-areas: 
+        "navbar         navbar"
+        "header         header"
+        "main1          main1"
+        "sectioneventos sectioneventos"
+        "footer         footer";
+
+    }
+
+    .navbar{
+        padding: 0px;
+        margin: 0px;
+    }
+    .navbar img{
+        width: 60px;
+        margin-top: 10px;
+        float: left;
+
+    }
+    .navbar ul li{
+        font-size: 18px;
+        margin-top: 20px;
+        padding: 10px;
+        float: right;
+        list-style:none;
+    }
+
+
+
+/* slider */
+.slider {
+    border-radius: 5px;
+    position: relative;
+}
+
+.slider ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;    
+}
+
+.slider ul li  {
+    position: relative;
+    display: none;
+    height:600px;
+}
+
+.slider ul li img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* buttons */
+.slider .buttons  {
+    position: absolute;
+    top: 40%;
+    width:  100%;
+}
+.slider .buttons .next {
+    font-size: 2rem;
+    right: 0;
+    position: absolute;
+    cursor: pointer;
+    width: 50px;
+    text-align: center;
+}    
+.slider .buttons .prev {
+    font-size: 2rem;
+    left: 0;
+    position: absolute;
+    cursor: pointer;
+    width: 50px;
+    text-align: center;
+}   
+
+/* slider animation */
+.slider ul li {
+    animation-name: fade;
+    animation-duration: 2.5s;
+}
+
+
+
+
+    .main1{
+        margin-top: 60px;
+    }
+
+    .main1 h1{
+        font-size: 40px;
+    }
+    .main1 table{
+        margin-top: 30px;
+        text-align: left;
+        border: 1px solid #000;
+    }
+    .main1 tr td{
+        padding: 10px;
+    }
+
+    .sectioneventos{
+        margin-top: 30px;
+    }
+
+    .sectioneventos h1{
+        font-size: 40px;
+    }
+
+    .containerImg{
+        margin-top: 40px;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .containerImg div img{
+        max-width: 400px;
+        box-shadow: 5px 8px 12px black;
+
+    }
+
+    .containerImg div p{
+        font-size: 20px;
+        margin-top: 15px;
+    }
+
+    form{
+        background-color: #9C6644;
+        border-radius: 3px;
+        padding: 40px;
+        margin: 0 auto;
+        width: 400px;
+        height: 450px;
+    }
+
+    
+
+    form p{
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    form input{
+        border: 0;
+        outline: none;
+        width: 300px;
+        height: 15px;
+        padding: 20px;
+    }
+
+    .events{
+        width: 350px;
+        height: 30px;
+        text-align: center;
+    }
+
+    .inscribe{
+        display: flex;
+        justify-content: center;
+        padding: 140px;
+    }
+
+    .inscribe .inscribeSubmit {
+        text-decoration:none;
+        font-weight: 50px;
+        font-size: 20px;
+        color:#ffffff;
+        padding-top:15px;
+        padding-bottom:15px;
+        padding-left:126px;
+        padding-right:126px;
+        background-color:#B08968;
+        border-color: #331815;
+        border-width: 3px;
+        border-style: solid;
+        }
+
+        .inscribeSubmit:hover{
+            color: #ffffff;
+            background-color: #331815;
+            text-decoration: none;
+          }
+    .footer{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .footer i{
+        margin: 1em;
+    }
+}
+
+
+@media (min-width: 599px){
+    .container{
+        grid-template-rows: 80px 700px 600px auto 90px;
+        grid-template-areas: 
+        "navbar         navbar"
+        "header         header"
+        "main1          main1"
+        "sectioneventos sectioneventos"
+        "footer         footer";
+
+    }
+
+    .navbar{
+        padding: 0px;
+        margin: 0px;
+    }
+    .navbar img{
+        width: 60px;
+        margin-top: 10px;
+        float: left;
+
+    }
+    .navbar ul li{
+        font-size: 18px;
+        margin-top: 20px;
+        padding: 10px;
+        float: right;
+        list-style:none;
+    }
+
+
+    /* slider */
+    .slider {
+        border-radius: 5px;
+        position: relative;
+    }
+
+    .slider ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;    
+    }
+
+    .slider ul li  {
+        position: relative;
+        display: none;
+        max-height:700px;
+    }
+
+    .slider ul li img {
+        max-height:700px;
+        max-width: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    /* buttons */
+    .slider .buttons  {
+        position: absolute;
+        top: 40%;
+        width:  100%;
+    }
+    .slider .buttons .next {
+        font-size: 2rem;
+        right: 0;
+        position: absolute;
+        cursor: pointer;
+        width: 50px;
+        text-align: center;
+    }    
+    .slider .buttons .prev {
+        font-size: 2rem;
+        left: 0;
+        position: absolute;
+        cursor: pointer;
+        width: 50px;
+        text-align: center;
+    }   
+
+    /* slider animation */
+    .slider ul li {
+        animation-name: fade;
+        animation-duration: 2.5s;
+    }
+
+
+
+
+    .main1{
+        margin-top: 80px;
+    }
+
+    .main1 h1{
+        font-size: 40px;
+    }
+    .main1 table{
+        height:400px;
+        width: 600px;
+        max-width: 800px;
+        margin: auto;
+        margin-top: 60px;
+        text-align: left;
+        border: 1px solid #000;
+    }
+    .main1 tr td{
+        padding: 10px;
+    }
+    .sectioneventos{
+        margin-top: 70px;
+    }
+
+    .sectioneventos h1{
+        font-size: 40px;
+    }
+
+    .containerImg{
+        margin-top: 70px;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .containerImg div img{
+        max-width: 600px;
+        box-shadow: 5px 8px 12px black;
+
+    }
+
+    .containerImg div p{
+        font-size: 20px;
+        margin-top: 18px;
+        
+    }
+
+    form{
+        background-color: #9C6644;
+        border-radius: 3px;
+        padding: 40px;
+        margin: 0 auto;
+        width: 400px;
+        height: 450px;
+    }
+
+    
+
+    form p{
+        
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    form input{
+        border: 0;
+        outline: none;
+        width: 300px;
+        height: 15px;
+        padding: 20px;
+    }
+
+    .events{
+        width: 350px;
+        height: 30px;
+        text-align: center;
+    }
+
+    .inscribe{
+        display: flex;
+        justify-content: center;
+        padding: 140px;
+    }
+
+    .inscribe .inscribeSubmit {
+        text-decoration:none;
+        font-weight: 50px;
+        font-size: 20px;
+        color:#ffffff;
+        padding-top:15px;
+        padding-bottom:15px;
+        padding-left:126px;
+        padding-right:126px;
+        background-color:#B08968;
+        border-color: #331815;
+        border-width: 3px;
+        border-style: solid;
+        }
+
+        .inscribeSubmit:hover{
+            color: #ffffff;
+            background-color: #331815;
+            text-decoration: none;
+          }
+    .footer{
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        margin-bottom: 0;
+        margin-top: 40px;
+        overflow: visible;
+    }
+    .footer i{
+        margin: 1em;
+    }
+}
